@@ -1,0 +1,87 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-all",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/FSH.Microservices.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "publish:catalog-api",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/services/catalog/Host/Host.csproj",
+                "--os",
+                "linux",
+                "--arch",
+                "x64",
+                "-c",
+                "Release",
+                "-p:PublishProfile=DefaultContainer",
+                "-p:ContainerImageTags=latest",
+                "--self-contained"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish:identity-server",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/identity-server/Host/Host.csproj",
+                "--os",
+                "linux",
+                "--arch",
+                "x64",
+                "-c",
+                "Release",
+                "-p:PublishProfile=DefaultContainer",
+                "-p:ContainerImageTags=latest",
+                "--self-contained"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish:api-gateway",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/api-gateway/Gateway/Gateway.csproj",
+                "--os",
+                "linux",
+                "--arch",
+                "x64",
+                "-c",
+                "Release",
+                "-p:PublishProfile=DefaultContainer",
+                "-p:ContainerImageTags=latest",
+                "--self-contained"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "docker-compose up",
+            "type": "docker-compose",
+            "dockerCompose": {
+                "up": {
+                    "detached": true
+                }
+            }
+        }
+    ]
+}

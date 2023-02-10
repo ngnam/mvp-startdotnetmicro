@@ -1,0 +1,37 @@
+[
+  {
+    "_id": "f78ffc63-1e4b-4865-b407-b446502a957d",
+    "name": "local",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-01-28T00:56:06.534Z",
+    "modified": "2023-01-28T00:56:06.534Z",
+    "data": [
+      {
+        "name": "api-gateway-url",
+        "value": "https://localhost:5100"
+      },
+      {
+        "name": "identity-server-url",
+        "value": "https://localhost:5200"
+      },
+      {
+        "name": "catalog-api-url",
+        "value": "https://localhost:5300"
+      },
+      {
+        "name": "access_token",
+        "value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkM2N0QxMjgzNDQ5QkI4RDc5MDExRjFENUVDM0RDOTcxIiwidHlwIjoiYXQrand0In0.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MjAwIiwibmJmIjoxNjc1NzA1ODUwLCJpYXQiOjE2NzU3MDU4NTAsImV4cCI6MTY3NTcwOTQ1MCwic2NvcGUiOlsiY2F0YWxvZy1hcGkiXSwiYW1yIjpbImN1c3RvbSJdLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzdWIiOiJkYzJlODNiNy05MzExLTRjMWMtYTUzMi0zMDMwNmFjODM4MTciLCJhdXRoX3RpbWUiOjE2NzU3MDU4NTAsImlkcCI6ImxvY2FsIiwianRpIjoiRjA2NDgxREIyNUM2MDc4NEQ1MkJDQkRGMUJBODFCMTEifQ.tqSPz1NzXPK4HTGuegiDL4PS9tGzwqXg-nW0Ki7qK7poEK_0thfwGdfiDu3dH47H3obwaYTVFYBkdZbNoPJhFQk2W5HQb2cxLUfS99ysPc8_zfhYwHvNOMYi2-14rKF59EnWwrevy4qtzrS6A4LNEIKwGxBZfCWtGJf5kpQfYOmfbl5FB8ApItMsP38UE8CcjsKR5XWOjr3FhortiSiKcuDkBu6oQYwMapMCHY_ai5AnvkFm-CEYr0pdvdQQRtPaHa-SR80c7KIN9W6SBfzP1P827RcFt4ku3DvelqTws_5c795NBLUObTeVCtj-vMGdZauwYOgeetvxccBE1pu-Jg"
+      }
+    ]
+  },
+  {
+    "_id": "2a1fec2c-abd8-472d-aa81-49e64d1674f1",
+    "name": "docker",
+    "default": false,
+    "sortNum": 20000,
+    "created": "2023-01-28T00:57:50.602Z",
+    "modified": "2023-01-28T00:57:50.602Z",
+    "data": []
+  }
+]
